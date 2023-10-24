@@ -3,3 +3,23 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+car_create:
+    path: /create
+    controller: App\Controller\CarController::create
+
+
+update:
+    path: /update/{id}
+    controller: App\Controller\CarController::update
+    methods: [GET, POST]
+    requirements:
+        id: \d+  
+
+
+delete:
+    path: /delete/{id}
+    controller: App\Controller\CarController::delete
+    methods: [GET] 
+    requirements:
+        id: \d+ 

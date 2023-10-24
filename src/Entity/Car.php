@@ -20,6 +20,10 @@ class Car
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $creationDate = null;
 
+    #[ORM\ManyToOne(inversedBy: 'cars')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Factory $Factory = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -45,6 +49,18 @@ class Car
     public function setCreationDate(\DateTimeInterface $creationDate): static
     {
         $this->creationDate = $creationDate;
+
+        return $this;
+    }
+
+    public function getFactory(): ?Factory
+    {
+        return $this->Factory;
+    }
+
+    public function setFactory(?Factory $Factory): static
+    {
+        $this->Factory = $Factory;
 
         return $this;
     }

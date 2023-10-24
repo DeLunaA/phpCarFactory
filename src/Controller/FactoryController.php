@@ -6,7 +6,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Factory;
 use App\Form\FactoryType;
 
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

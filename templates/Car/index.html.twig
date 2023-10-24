@@ -13,6 +13,8 @@
                 <th scope="col">ID</th>
                 <th scope="col">model</th>
                 <th scope="col">Creation Date</th>
+                <th scope="col">Factory</th>
+
             </tr>
         </thead>
         <tbody>
@@ -21,6 +23,8 @@
                 <th scope="row">{{ data.id }}</th>
                 <td>{{ data.model }}</td>
                 <td>{{ data.creationDate|date('Y-m-d H:i:s') }}</td>
+                <td>{{ data.Factory.name }}</td>
+
                 <td>
                     <a class="btn btn-warning" href="{{ path('update', {'id': data.id }) }}">Update</a>
                     <a class="btn btn-danger" href="{{ path('delete', {'id': data.id }) }}">Delete</a>

@@ -23,3 +23,25 @@ delete:
     methods: [GET] 
     requirements:
         id: \d+ 
+
+
+create:
+    path: /createf
+    controller: App\Controller\FactoryController::create
+    methods: [GET, POST]
+
+
+updatefactory:
+    path: /updatefactory/{id}
+    controller: App\Controller\FactoryController::update
+    methods: [GET, POST]
+    requirements:
+        id: \d+  
+
+
+deletefactory:
+    path: /deletefactory/{id}
+    controller: App\Controller\FactoryController::delete
+    methods: [GET] 
+    requirements:
+        id: \d+ 
